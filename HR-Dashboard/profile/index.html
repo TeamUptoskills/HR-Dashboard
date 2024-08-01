@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>apnaHire - Post a Job</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  </head>
+  <body >
+    <div class="nav_header_container">
+      <div class="nav_header_sidebar sidebarGo">
+        <nav >
+        <ul class="nav_header_sidebaritems">
+          <li class="company"><a href="#">UpToSkills</a></li>
+          <li class="nav_header_sidebaritem"><a href="index.html">Jobs</a></li>
+          <li class="nav_header_sidebaritem dropdown"><a href="#">Database</a>
+            <ul class="nav_header_dropdownmenu">
+              <li><a href="DB-Search.html">Search Candidates</a></li>
+              <li><a href="#">Saved Searches</a></li>
+              <li><a href="#">Unlocked Candidates</a></li>
+            </ul>
+          </li>
+          <li class="nav_header_sidebaritem"><a href="reports.html">Reports</a></li>
+          <li class="nav_header_sidebaritem"><a href="#">Credits & Usage</a></li>
+          <li class="nav_header_sidebaritem"><a href="biling.html">Billing</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Contact Sales</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Buy Credits</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="nav_header_content">
+        <div class="nav_header_Navbar">
+          <img src ="Images/Uptoskills1.jpg" alt="Uptoskills Logo" height="80" width="170" >
+           <div class="hamburger_logo">
+          <img class="ham" src="Images/hamberger.jpg" alt="" width="29">
+          <img class="cross" src="Images/cross.jpg" alt="" width="15">
+          <!-- <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1q1xwc2" style="margin-left: 0px;">S</div> -->
+          </div> 
+          <!-- <h1>Jobs</h1> -->
+          <div class="nav_header_Nav-items">
+             <a href="#" class="nav_header_item">Available credits</a>
+             <a href="#" class="nav_header_item">Support</a>
+             <img  class="nav_header_Ui" src="Images/Ui.jpg" height="45" width="45">
+          </div>
+        </div>
+        <div>
+          <header>
+            <a href="#overview">Overview</a>
+            <a href="#roles">Roles</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+          </header>
+          <div class="bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">Profile</h2>
+                <button id="editButton" class="bg-green-500 text-white hover:bg-green-700 px-4 py-2 rounded">Edit</button>
+                <button id="saveButton" class="bg-blue-500 text-white hover:bg-blue-700 px-4 py-2 rounded hidden">Save</button>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Basic Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label for="name" class="block text-gray-600 mb-1">Name *</label>
+                        <input type="text" id="name" value="Shivam Agarwal" class="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800" disabled />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-600 mb-1">Email</label>
+                        <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800" disabled />
+                    </div>
+                    <div>
+                        <label for="mobile" class="block text-gray-600 mb-1">Mobile *</label>
+                        <input type="text" id="mobile" value="7417269505" class="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800" disabled />
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">GST Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="gst" class="block text-gray-600 mb-1">GST No.</label>
+                        <input type="text" id="gst" class="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800" disabled />
+                    </div>
+                    <div class="flex items-end">
+                        <button id="verifyButton" class="bg-green-500 text-white hover:bg-green-700 px-4 py-2 rounded">Verify</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById('editButton').addEventListener('click', function () {
+                // Enable all input fields
+                document.querySelectorAll('input').forEach(input => {
+                    input.disabled = false;
+                    input.classList.remove('bg-gray-100');
+                    input.classList.add('bg-white');
+                });
+                // Hide Edit button and show Save button
+                document.getElementById('editButton').classList.add('hidden');
+                document.getElementById('saveButton').classList.remove('hidden');
+            });
+    
+            document.getElementById('saveButton').addEventListener('click', function () {
+                // Disable all input fields
+                document.querySelectorAll('input').forEach(input => {
+                    input.disabled = true;
+                    input.classList.remove('bg-white');
+                    input.classList.add('bg-gray-100');
+                });
+                // Hide Save button and show Edit button
+                document.getElementById('saveButton').classList.add('hidden');
+                document.getElementById('editButton').classList.remove('hidden');
+    
+                // Save the data (you can implement actual saving logic here)
+                // Example: Save the data using an API call or localStorage
+                console.log('Data saved:', {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    mobile: document.getElementById('mobile').value,
+                    gst: document.getElementById('gst').value,
+                });
+            });
+        </script>
+         </div>        
+        </div>
+      </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

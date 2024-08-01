@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="logo.png" alt="Uptoskills Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+            <span>Available Credits</span>
+            <span>Support</span>
+            <span>A</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <h1>Company profile</h1>
+            <div class="warning"><i class="fa-solid fa-triangle-exclamation"></i> Please share company information to improve job seekers trust. Update <b>7 information</b></div>
+        </div>
+
+        <div class="box">
+            <h2>Basic details</h2>
+            <div class="detail-item">
+                <div class="detail-label">Company Logo
+                    <div class="circle"><br>T</div>
+                </div>
+                <button class="suggest-button" onclick="openPopup('logo-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Company name
+                    <p class="text"><br>Technified</p>
+                </div>
+                
+                <button class="suggest-button" onclick="openPopup('name-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Founded
+                    <p class="text"><br>Not Available</p>
+                </div>
+                
+                <button class="suggest-button" onclick="openPopup('founded-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Website
+                    <p class="text"><br>Not Available</p>
+                </div>
+                
+                <button class="suggest-button" onclick="openPopup('website-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Company size
+                    <p class="text"><br>Not Available</p>
+                </div>
+                
+                <button class="suggest-button" onclick="openPopup('size-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Type of company
+                    <p class="text"><br>Not Available</p>
+                </div>
+                
+                <button class="suggest-button" onclick="openPopup('type-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Industry
+                    <p class="text"><br>FinTech / Payment, IT Services & Consulting, Software Product</p>
+                </div>
+                
+                <button class="suggest-button" onclick="openPopup('industry-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">About Company
+                    <p class="text"><br>Not Available</p>
+                </div>
+                
+                <button class="suggest-button" onclick="openPopup('about-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Social profiles</h2>
+            <div class="social-item">
+                <div class="detail-label"><i class="fa-brands fa-linkedin"></i>LinkedIn</div>
+                <div class="detail-label"><i class="fa-brands fa-facebook"></i>Facebook</div>
+                <div class="detail-label"><i class="fa-brands fa-square-instagram"></i>Instagram</div>
+                <button class="suggest-button" onclick="openPopup('social-popup')"><i class="fa-solid fa-circle-plus"></i>Suggest</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <div class="popup" id="logo-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="logo-upload">Upload a photo:</label>
+            <input type="file" id="logo-upload">
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('logo-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="name-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="company-name">Name:</label>
+            <input type="text" id="company-name">
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('name-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="founded-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="founded-year">Founded:</label>
+            <input type="number" id="founded-year" min="1900" max="2099">
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('founded-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="website-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="website-url">Website:</label>
+            <input type="url" id="website-url">
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('website-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="size-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="company-size">Company size:</label>
+            <input type="number" id="company-size" min="1">
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('size-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="type-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="company-type">Type of company:</label>
+            <select id="company-type">
+                <option value="government">Government Agency</option>
+                <option value="private">Private Limited Company</option>
+                <option value="ngo">NON- profit (NGO)</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('type-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="industry-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="industry-type">Industry:</label>
+            <select id="industry-type">
+                <option value="beverage">Beverage</option>
+                <option value="biotech">Biotech</option>
+                <option value="chemicals">Chemicals</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('industry-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="about-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="company-description">Description:</label>
+            <textarea id="company-description"></textarea>
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('about-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="social-popup">
+        <div class="popup-content">
+            <h2>Make a Suggestion</h2>
+            <label for="linkedin-url">LinkedIn:</label>
+            <input type="url" id="linkedin-url">
+            <label for="facebook-url">Facebook:</label>
+            <input type="url" id="facebook-url">
+            <label for="instagram-url">Instagram:</label>
+            <input type="url" id="instagram-url">
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('social-popup')">Cancel</button>
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

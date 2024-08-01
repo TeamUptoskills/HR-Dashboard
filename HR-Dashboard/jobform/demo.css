@@ -1,0 +1,463 @@
+body{
+  background-color: #6b7280;
+}
+
+.main{
+  margin-top: 10px;
+  display: block;
+}
+
+form{
+  width: 75%;
+  background-color: white;
+  margin: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.interveiw-info{
+  display: block;
+}
+
+.interveiw-info h3{
+  margin-bottom: 0px;
+  padding-top: 24px;
+}
+
+.type-iw{
+  display: block;
+}
+
+.type-iw-sel{
+  display: flex;  
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 10px;
+} 
+
+.typeof {
+  width: fit-content;
+  background-color: white;  
+  border: 1px solid #ccc;  
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px; 
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+.typeof:hover{
+  background-color: #f0f0f0;
+}
+
+#telephonic.active{
+  background-color: rgb(211, 238, 252);
+	color: #004BA9;
+	border-radius: 50px;
+  font-weight: bold;
+  border: 1px solid #004BA9;
+}
+
+#in-person.active{
+  background-color: rgb(211, 238, 252);
+	color: #004BA9;
+	border-radius: 50px;
+  font-weight: bold;
+  border: 1px solid #004BA9;
+}
+
+.interveiw-info label{
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+label span.required {
+  color: red;
+  font-weight: bold;
+}
+
+.noti-pref1 h4 span.required{
+  color: red;
+  font-weight: bold;
+}
+
+.noti-pref2 h4 span.required{
+  color: red;
+  font-weight: bold;
+}
+
+.noti-pref3 h4 span.required{
+  color: red;
+  font-weight: bold;
+}
+
+.section h4 span.required{
+  color: red;
+  font-weight: bold;
+}
+
+.call-whats h4 span.required{
+  color: red;
+  font-weight: bold;
+}
+
+.walk-in a{
+  color: #004BA9;
+}
+
+.addressfield{
+  margin-bottom: 10px;
+}
+
+.address input{
+  width: 97%;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid lightgray;
+}
+
+.yes-no{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+
+#yes.active{
+  background-color: rgb(211, 238, 252);
+	color: #004BA9;
+	border-radius: 50px;
+  font-weight: bold;
+  border: 1px solid #004BA9;
+}
+
+#no.active{
+  background-color: rgb(211, 238, 252);
+	color: #004BA9;
+	border-radius: 50px;
+  font-weight: bold;
+  border: 1px solid #004BA9;
+}
+
+.choice {
+  width: 50px;
+  padding: 8px;  
+  border: 1px solid #ccc;  
+  border-radius: 50px;  
+  cursor: pointer;
+  text-align: center; 
+  margin-right: 10px;
+}  
+.choice:hover {  
+  background-color: #f0f0f0;
+}  
+
+.start-end{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 24px;
+}
+
+.start-end input{
+  border: 1px solid #ccc;
+}
+
+.walkintime{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.start-end input{
+  padding: 8px;
+  border-radius: 5px;
+}
+
+select{
+  width: 24%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.space{
+  margin: 10px;
+  justify-content: center;
+}
+
+.instruc-box input{
+  width: 97%;
+  align-items: flex-start;
+  padding: 10px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  border: 1px solid lightgray;
+}
+
+.recruiters-details input{
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  border: 1px solid lightgray;
+}
+
+.comm-pref h4{
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.comm-pref h3{
+  margin-bottom: 16px;
+  padding-top: 15px;
+}
+
+.addaddress button{
+  color: blue;
+  background-color: white;
+  border: none;
+}
+
+.addaddress button :hover{
+  color: blue;
+}
+
+.check{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#permanent-address-input{
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  border: 1px solid lightgray;
+}
+
+#permanent-address-field input{
+  margin-bottom: 10px;
+}
+
+.walk-in{
+  margin-top: 10px;
+}
+
+.comm-pref input{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.notification1 form,.notification2 form,.notification3 form{
+  margin: 0px;
+  padding: 0px;
+}
+
+.break{
+  margin-top: 15px;
+  margin-left: -24px;
+  margin-right: -24px;
+  height: 12px;
+  background-color: aliceblue;
+}
+
+.bluebox{
+  width: fit-content;
+  background-color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid lightskyblue;
+  padding: 12px;
+}
+
+input[type="radio"] {
+  accent-color: blue;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+  column-gap: 20px;
+}
+#back-btn {
+  background-color: white;
+  border: 1px solid grey;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#continue-btn {
+  background: rgb(31, 130, 104);
+  color: #ffffff;
+  border: none;
+  padding: 12px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#back-btn:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#continue-btn:hover {
+  background: rgb(18, 81, 64);
+}
+
+.know-more-box {
+  width: 700px;
+  height: 550px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.know-more-box.show {
+  display: block;
+}
+
+.know-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #021330;
+  opacity: 0.6;
+  z-index: 900;
+}
+
+.know-overlay.show {
+  display: block;
+}
+
+.kmodal-close{
+  margin: 0px;
+  padding: 0px;
+}
+
+.kclose-button {
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 30px;
+}
+
+.kmodal-content{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 18px;
+  box-sizing: inherit;
+}
+
+.know-more-head{
+  background-color: rgb(234, 237, 242);
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.know-modal-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.km-header h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+.km-content{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.body-content{
+  display: flex;
+  -webkit-box-align: start;
+  align-items: start;
+  gap: 8px;
+}
+
+.km-info{
+  display: flex;
+  padding: 10px 12px;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid rgb(193, 219, 251);
+  background: rgb(235, 243, 254);
+}
+
+.km-okay{
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.okay-button{
+  display: flex;
+    cursor: pointer;
+    width: 174px;
+    padding: 10px 16px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: rgb(31, 130, 104);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.okay-button:hover{
+  background-color: rgb(15, 63, 50);
+}
+
+.km-info a{
+  margin: 0px;
+  padding: 0px;
+  color: #004BA9;
+}

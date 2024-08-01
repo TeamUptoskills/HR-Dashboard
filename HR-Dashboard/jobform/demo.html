@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form 3-Interviewer Information</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+    <div class="main">
+      <form>
+      <div class="interveiw-info">
+        <h3>Intrerview method and address</h3>
+        Let candidates know how interview will be conducted for this job.
+        <br>
+        <div class="type-iw">
+          <label for="type-of-interview"><b>Type of Interview <span class="required">*</span></b></label>
+          <div class="type-iw-sel">
+            <div id="in-person" class="typeof">In-Person / Walk-In-Interview</div>
+            <div id="telephonic" class="typeof">Telephonic / Online-Interview</div>
+          </div>
+        </div>
+        
+        <div class="inperson1" style="display: none;">
+          <div class="address">
+            <div class="addressfield">
+            <label for="int-address"><b>Interviewer Address <span class="required">*</span></b></label>
+            <input type="text" id="int-address" placeholder="Search for your address/locality" name="int-address">
+            </div>
+
+            <div class="addaddress">
+              <button type="button" id="add-address-btn" onclick="addAddressField()">+ Add Floor / Plot no. / Shop no. (optional)</button>
+              <div id="additional-addresses"></div>
+            </div>
+          </div>
+
+          <div class="permanent-addr">
+            <div class="check">
+            <label for="permanent-address">
+            <input type="checkbox" id="permanent-address" name="permanent-address" checked>
+            <b>Company address is same as Interview address</b></label>
+            </div>
+
+            <div id="permanent-address-field" style="display: none;">
+              <label for="permanent-address-input"><b>Company Address <span class="required">*</span></b></label>
+              <input type="text" id="permanent-address-input" name="permanent-address-input" placeholder="Enter your Address / Locality">
+            </div>
+          </div>
+
+          <div class="walk-in">
+            <label for="walk-in-int"><b>Is this a walk in Interview? <span class="required">*</span></b> <a href="#" id="know-more">Know more</a></label> 
+            <div class="yes-no">
+              <div id="yes" class="choice">  
+                <span>Yes</span>  
+              </div> 
+
+              <div id="no" class="choice">  
+                <span>No</span>  
+              </div>
+            </div>
+          </div>
+
+          <div class="yes-option" style="display: none;">
+            <div class="start-end">
+              <div class="start-date">
+                <label for="start-date"><b>Start Date <span class="required">*</span></b></label>
+                <input type="date" id="start-date" />
+              </div>
+              <div class="end-date">
+                <label for="end-date"><b>End Date <span class="required">*</span></b></label>
+                <input type="date" id="end-date" />
+              </div>
+            </div>
+
+            <div class="walk-in-time">
+              <label for="walk-in-timings"><b>Walk In Timings <span class="required">*</span></b></label>
+              <div class="walkintime">
+              <select id="walkin-time" name="walkintime">
+                <option value="08:00">8:00 AM</option>
+                <option value="08:30">8:30 AM</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="09:30">9:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="13:30">1:30 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="14:30">2:30 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="15:30">3:30 PM</option>
+              </select>
+
+              <div class="space">-</div>
+              
+              <select id="walkout-time" name="walkouttime">
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="13:30">1:30 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="14:30">2:30 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="15:30">3:30 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="16:30">4:30 PM</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="17:30">5:30 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="18:30">6:30 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="19:30">7:30 PM</option>
+                <option value="20:00">8:00 PM</option>
+              </select>
+              </div>
+            </div>
+
+            <div class="other-ins">
+              <label for="other-ins"><b>Other Instructions</b></label>
+              <div class="instruc-box">
+                <input type="text" id="instruction" placeholder="e.g, Bring ID Card, CV / Resume etc..." name="instruction">
+              </div>
+            </div>
+          </div>
+
+          <div class="no-option"></div>
+
+        </div>
+
+        <div class="telepho" style="display: block;">
+          <label for="permanent-address-input"><b>Company Address <span class="required">*</span></b></label>
+          <input type="text" id="permanent-address-input" name="permanent-address-input" placeholder="Enter your Address / Locality">
+        </div>
+      </div>
+
+      <div class="break"></div>
+    
+      <div class="comm-pref">
+        <h3>Communication Preferences</h3>
+        <div class="bluebox">
+          <i class="fa-solid fa-download"></i>
+          Leads information will be accessible on UptoSkills portal and can be <b>downloaded in excel</b> format
+        </div>
+
+        <div class="call-whats">
+          <h4>Do you want candidates to contactyou via Call / Whatsapp after they apply? <span class="required">*</span></h4>
+          <div>
+          <label>
+            <input type="radio" name="comm" value="yes-to-myself">
+            Yes, to myself
+          </label>
+          </div>
+          <div>
+          <label>
+            <input type="radio" name="comm" value="yes-to-other">
+            Yes, to other recruiter
+          </label>
+          </div>
+          <div>
+          <label>
+            <input type="radio" name="comm" value="no-i" checked>
+            No, I will contact candidate first
+          </label>
+          </div>
+        </div>
+
+        <div class="section">
+          <div id="sectionyes1" style="display: none;">
+            <h4>Which candidates should be able to contact you? <span class="required">*</span></h4>
+            <div>
+              <label>
+                <input type="radio" name="yes1" value="all">
+                All candidates
+              </label>
+              </div>
+              <div>
+              <label>
+                <input type="radio" name="yes1" value="only">
+                Only matched candidates (~60% of all candidates)
+              </label>
+              </div>
+              <div class="break"></div>
+              <div class="notification1">
+                <h3>Notification Preferences</h3>
+                <div class="noti-pref1">
+                  <h4>Every time you receive a matched candidate application,do you wantWhatsapp Alerts from UptoSkills? <span class="required">*</span></h4>
+                  <div>
+                  <label>
+                    <input type="radio" name="notify" value="yes-to-myself" checked>
+                    Yes, to myself
+                  </label>
+                  </div>
+                  <div>
+                  <label>
+                    <input type="radio" name="notify" value="no-i">
+                    No, send me summary once a day.
+                  </label>
+                  </div>
+                </div>        
+              </div>
+          </div>
+
+          <div id="sectionyes2" style="display: none;">
+            <h4>Fill other recruiter details</h4>
+            <div class="recruiters-details">
+              <label for="name">Recruiter's Name <span class="required">*</span></label>
+              <input type="text" placeholder="Enter Full Name">
+              <label for="number">Recruiter's Whatsapp no. <span class="required">*</span></label>
+              <input type="text" placeholder="Enter Number">
+              <label for="email">Recruiter's Email ID <span class="required">*</span></label>
+              <input type="text" placeholder="Enter Email ID">
+            </div>
+            <div class="which">
+              <h4>Which candidates should be able to contact you? <span class="required">*</span></h4>
+                <div>
+                <label>
+                  <input type="radio" name="yes1" value="all">
+                  All candidates
+                </label>
+                </div>
+                <div>
+                <label>
+                  <input type="radio" name="yes1" value="only">
+                  Only matched candidates (~60% of all candidates)
+                </label>
+                </div>
+            </div>
+            <div class="break"></div>
+            <div class="notification2">
+              <h3>Notification Preferences</h3>
+              <div class="noti-pref2">
+                <h4>Every time you receive a matched candidate application,do you wantWhatsapp Alerts from UptoSkills? <span class="required">*</span></h4>
+                <div>
+                <label>
+                  <input type="radio" name="notify" value="yes-to-other" checked>
+                  Yes, to other recruiter
+                </label>
+                </div>
+                <div>
+                <label>
+                  <input type="radio" name="notify" value="no-i">
+                  No, send me summary once a day.
+                </label>
+                </div>
+              </div>        
+            </div>              
+          </div>
+
+          <div id="sectionno">
+            <div class="break"></div>
+            <div class="notification3">
+              <h3>Notification Preferences</h3>
+              <div class="noti-pref3">
+                <h4>Every time you receive a matched candidate application,do you wantWhatsapp Alerts from UptoSkills? <span class="required">*</span></h4>
+                <div>
+                <label>
+                  <input type="radio" name="notify" value="yes-to-myself" checked>
+                  Yes, to myself
+                </label>
+                </div>
+                <div>
+                <label>
+                  <input type="radio" name="notify" value="yes-to-other">
+                  Yes, to other recruiter
+                </label>
+                </div>
+                <div>
+                <label>
+                  <input type="radio" name="notify" value="no-i">
+                  No, send me summary once a day.
+                </label>
+                </div>
+              </div>        
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="break"></div>
+
+      <div class="button-container">
+        <button type="button" id="back-btn">Back</button>
+        <button type="button" id="continue-btn">Continue</button>
+      </div>
+    </form>
+    </div>
+
+    <div class="know-more-box" id="know-more-box">
+      <div class="kmodal-content">
+        <div class="kmodal-close">
+          <div class="kclose-button" id="close-kmodal">×</div>
+        </div>
+        <div class="know-more-head">
+          <img src="9.jpeg">
+        </div>
+        <div class="know-modal-cont">
+          <div class="km-header">
+            <h2>Important note for Walk-in Interview jobs :</h2>
+          </div>
+          <div class="km-content">
+            <div class="body-content">
+              <span>1.</span><span>Remember to call candidates for better results.</span>
+            </div>
+            <div class="body-content">
+              <span>2.</span><span>Jobs with walk-in interviews will be marked with a “Walk-in” tag.</span>
+            </div>
+            <div class="body-content">
+              <span>3.</span><span>Selecting walk-in doesn’t ensure more applications. It’s just an option for you to share walk-in interview details with candidates.</span>
+            </div>
+            <div class="body-content">
+              <span>4.</span><span>The “Walk-in” tag will be removed after the event, but candidates can still apply (until the job expires)</span>
+            </div>
+          </div>
+          <div class="km-info">
+            <i class="fa-solid fa-circle-info"></i>
+            By choosing this, you adhere to UptoSkills <a href="#">Terms of Service</a> and <a href="#">Code of Conduct</a>
+          </div>
+          <div class="km-okay">
+            <div class="okay-button">
+              Okay, Got it
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="know-overlay" id="know-overlay"></div>
+
+    <script src="demo.js"></script>
+  </body>
+</html>

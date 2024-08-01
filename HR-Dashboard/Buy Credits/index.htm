@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="UPTOSKILLS logo">
+        </div>
+        <span class="close-btn" onclick="closeWindow()">&times;</span>
+    </header>
+    <section>
+    <div id="alert-banner" class="alert">
+        <p><h4>Limited time deal: ₹300 OFF</h4></p>
+        <p>Save additional ₹300 on 1 Month Plan and above with promo code <strong>FIRST60</strong>. Offer ends in 5 days</p>
+    </div>
+</section>
+
+    <main>
+        <section class="hero">
+            <h1>Recruitment made easy with UPTOSKILLS</h1>
+            <p>Choose from our tailored plans and unlock your full potential to connect with top talent effortlessly.</p>
+            <a href="#">View how credits work</a>
+        </section>
+        <nav>
+            <ul>
+                <li class="tablink" onclick="openTab(event, 'BundlePlans')">Bundle plans</li>
+                <li class="tablink active" onclick="openTab(event, 'JobPostingPlans')">Job posting plans</li>
+                <li class="tablink" onclick="openTab(event, 'DatabasePlans')">Database plans</li>
+            </ul>
+        </nav>
+        
+        <section id="BundlePlans" class="tabcontent">
+            <div class="plans">
+                <div class="plan">
+                    <h2>12 Months</h2>
+                    <p>Best fit for larger hiring needs</p>
+                    <div class="price">
+                        <span class="discounted-price">₹9990</span>
+                        <span class="original-price">₹17200</span>
+                        <span class="discount">41% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li>10 Job credits</li>
+                        <li><b>800</b>Database credits</li>
+                        <li>Credits Valid for <b>360 days</b></li>
+                        <li>AI driven matching algorithm</li>
+                        <li>AI-assisted Search</li>
+                        <li>Area wise filter</li>
+                    </ul>
+                </div>
+                <div class="plan recommended">
+                    <h2>3 Months</h2>
+                    <p>Perfect for growing businesses</p>
+                    <div class="price">
+                        <span class="discounted-price">₹3190</span>
+                        <span class="original-price">₹5300</span>
+                        <span class="discount">40% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li>3 Job credits</li>
+                        <li><b>250</b>Database credits</li>
+                        <li>Credits Valid for <b>90 days</b></li>
+                        <li>AI driven matching algorithm</li>
+                        <li>AI-assisted Search</li>
+                        <li>Area wise filter</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h2>1 Months </h2>
+                    <p>Ideal for small teams</p>
+                    <div class="price">
+                        <span class="discounted-price">₹1690</span>
+                        <span class="original-price">₹2600</span>
+                        <span class="discount">35% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li>2 Job credits</li>
+                        <li><b>100</b>Database credits</li>
+                        <li>Credits Valid for <b>30 days</b></li>
+                        <li>AI driven matching algorithm</li>
+                        <li>AI-assisted Search</li>
+                        <li>Area wise filter</li>
+                    </ul>
+                </div>
+                <div class="plan-card custom">
+                    <h3>Custom Solution</h3>
+                    <p>Make your own personalised plan</p>
+                    <button>Contact Sales</button>
+                    <ol>
+                        <li>Dedicated <b>account manager</b></li>
+                        <li>Valid up to <b>360 days</b></li>
+                        <li> <b>Multiple logins</b> & Reports</li>
+                        <li>ATS Integration</li>
+                        <li>Company <b>branding & <br>boosting</b> </li>
+                        <li>Multimedia WhatsApp Invites</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        <section id="JobPostingPlans" class="tabcontent" style="display: block;">
+            <div class="plans">
+                <div class="plan">
+                    <h2>12 Months</h2>
+                    <p>Best fit for larger hiring needs</p>
+                    <div class="price">
+                        <span class="discounted-price">₹9990</span>
+                        <span class="original-price">₹12000</span>
+                        <span class="discount">17% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li>20 Job credits</li>
+                        <li>Valid for <b>360</b>days</li>
+                        <li>AI driven matching algorithm</li>
+                        <li>15+ Advanced filters</li>
+                        <li>Whatsapp & Call based lead <br>management</li>
+                    </ul>
+                </div>
+                <div class="plan recommended">
+                    <h2>3 Months</h2>
+                    <p>Perfect for growing businesses</p>
+                    <div class="price">
+                        <span class="discounted-price">₹3190</span>
+                        <span class="original-price">₹3600</span>
+                        <span class="discount">12% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li>6 Job credits</li>
+                        <li>Valid for <b>90</b>days</li>
+                        <li>AI driven matching algorithm</li>
+                        <li>15+ Advanced filters</li>
+                        <li>Whatsapp & Call based lead <br>management</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h2>1 Month</h2>
+                    <p>Ideal for small teams</p>
+                    <div class="price">
+                        <span class="discounted-price">₹1690</span>
+                        <span class="original-price">₹1800</span>
+                        <span class="discount">6% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li>6 Job credits</li>
+                        <li>Valid for <b>30</b>days</li>
+                        <li>AI driven matching algorithm</li>
+                        <li>15+ Advanced filters</li>
+                        <li>Whatsapp & Call based lead <br>management</li>
+                    </ul>
+                </div>
+                <div class="plan-card custom">
+                    <h3>Custom Solution</h3>
+                    <p>Make your own personalised plan</p>
+                    <button>Contact Sales</button>
+                    <ol>
+                        <li>Dedicated <b>account manager</b></li>
+                        <li>Valid up to <b>360 days</b></li>
+                        <li> <b>Multiple logins</b> & Reports</li>
+                        <li>ATS Integration</li>
+                        <li>Company <b>branding & <br>boosting</b> </li>
+                        <li>Multimedia WhatsApp Invites</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section id="DatabasePlans" class="tabcontent">
+            <div class="plans">
+                <div class="plan">
+                    <h2>12 Months</h2>
+                    <p>Best fit for larger hiring needs</p>
+                    <div class="price">
+                        <span class="discounted-price">₹9990</span>
+                        <span class="original-price">₹21000</span>
+                        <span class="discount">51% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li><b>1500</b> Database credits</li>
+                        <li>Valid for <b>360 days</b></li>
+                        <li>AI-assisted Search</li>
+                        <li>Area wise filter</li>
+                    </ul>
+                </div>
+                <div class="plan recommended">
+                    <h2>3 Months</h2>
+                    <p>Perfect for growing businesses</p>
+                    <div class="price">
+                        <span class="discounted-price">₹3190</span>
+                        <span class="original-price">₹6300</span>
+                        <span class="discount">50% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li><b>450</b> Database credits</li>
+                        <li>Valid for <b>90 days</b></li>
+                        <li>AI-assisted Search</li>
+                        <li>Area wise filter</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h2>1 Months </h2>
+                    <p>Ideal for small teams</p>
+                    <div class="price">
+                        <span class="discounted-price">₹1690</span>
+                        <span class="original-price">₹2800</span>
+                        <span class="discount">40% OFF</span>
+                    </div>
+                    <button>Buy Now</button>
+                    <ul class="features">
+                        <li><b>200</b> Database credits</li>
+                        <li>Valid for <b>30 days</b></li>
+                        <li>AI-assisted Search</li>
+                        <li>Area wise filter</li>
+                    </ul>
+                </div>
+                <div class="plan-card custom">
+                    <h3>Custom Solution</h3>
+                    <p>Make your own personalised plan</p>
+                    <button>Contact Sales</button>
+                    <ol>
+                        <li>Dedicated <b>account manager</b></li>
+                        <li>Valid up to <b>360 days</b></li>
+                        <li> <b>Multiple logins</b> & Reports</li>
+                        <li>ATS Integration</li>
+                        <li>Company <b>branding & <br>boosting</b> </li>
+                        <li>Multimedia WhatsApp Invites</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+            <div>
+                <p class="">*All plans prices are shown excluding applicable taxes.</p>
+            </div>
+
+        </section>
+        <section class="contact-help">
+            <div class="help-box">
+                <img src="support.png" alt="Support">
+                <div>
+                    <h3>Have more questions? We're here to help</h3>
+                    <p>Tell us more about your hiring needs so we can help you pick the right solution.</p>
+                </div>
+                <button>Contact Us</button>
+            </div>
+        </section>
+        <section class="flex-container">
+            <div class="flex-item">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="56" height="56" rx="8" fill="#D3BEF1"></rect>
+                    <g clip-path="url(#clip0_1864_55189)">
+                        <path d="M34.2266 29.5067C36.0532 30.7467 37.3332 32.4267 37.3332 34.6667V38.6667H42.6666V34.6667C42.6666 31.76 37.9066 30.04 34.2266 29.5067Z" fill="#512194"></path>
+                        <path d="M31.9999 28C34.9466 28 37.3332 25.6133 37.3332 22.6666C37.3332 19.72 34.9466 17.3333 31.9999 17.3333C31.3732 17.3333 30.7866 17.4666 30.2266 17.6533C31.3332 19.0266 31.9999 20.7733 31.9999 22.6666C31.9999 24.56 31.3332 26.3066 30.2266 27.68C30.7866 27.8666 31.3732 28 31.9999 28Z" fill="#512194"></path>
+                        <path d="M24.0013 28C26.948 28 29.3346 25.6133 29.3346 22.6666C29.3346 19.72 26.948 17.3333 24.0013 17.3333C21.0546 17.3333 18.668 19.72 18.668 22.6666C18.668 25.6133 21.0546 28 24.0013 28ZM24.0013 20C25.468 20 26.668 21.2 26.668 22.6666C26.668 24.1333 25.468 25.3333 24.0013 25.3333C22.5346 25.3333 21.3346 24.1333 21.3346 22.6666C21.3346 21.2 22.5346 20 24.0013 20Z" fill="#512194"></path>
+                        <path d="M24.0007 29.3333C20.4407 29.3333 13.334 31.12 13.334 34.6666V38.6666H34.6673V34.6666C34.6673 31.12 27.5606 29.3333 24.0007 29.3333ZM32.0007 36H16.0007V34.68C16.2673 33.72 20.4007 32 24.0007 32C27.6006 32 31.734 33.72 32.0007 34.6666V36Z" fill="#512194"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1864_55189">
+                            <rect width="32" height="32" fill="white" transform="translate(12 12)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p class="heading2">5 Crore+</p>
+                <p class="body2">Candidates use UPTOSKILLS</p>
+            </div>
+            <div class="flex-item">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="56" height="56" rx="8" fill="#C1DBFB"></rect>
+                    <g clip-path="url(#clip0_1864_55203)">
+                        <path d="M30.667 20V17.3334H25.3337V20H30.667ZM17.3337 22.6667V37.3334H38.667V22.6667H17.3337ZM38.667 20C40.147 20 41.3337 21.1867 41.3337 22.6667V37.3334C41.3337 38.8134 40.147 40 38.667 40H17.3337C15.8537 40 14.667 38.8134 14.667 37.3334L14.6803 22.6667C14.6803 21.1867 15.8537 20 17.3337 20H20.0003V17.3334C20.0003 15.8534 21.187 14.6667 22.667 14.6667H30.667C32.147 14.6667 33.3337 15.8534 33.3337 17.3334V20H38.667ZM24.0003 32.6667V34.6667H32.0003V32.6667H24.0003Z" fill="#19588D"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1864_55203">
+                            <rect width="32" height="32" fill="white" transform="translate(12 12)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p class="heading2">7 Lakhs+</p>
+                <p class="body2">Employee already at UPTOSKILLS</p>
+            </div>
+            <div class="flex-item">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="56" height="56" rx="8" fill="#B6ECEC"></rect>
+                    <g clip-path="url(#clip0_1864_55196)">
+                        <path d="M29.833 22.6666C29.833 19.72 27.4463 17.3333 24.4997 17.3333C21.553 17.3333 19.1663 19.72 19.1663 22.6666C19.1663 25.6133 21.553 28 24.4997 28C27.4463 28 29.833 25.6133 29.833 22.6666ZM27.1663 22.6666C27.1663 24.1333 25.9663 25.3333 24.4997 25.3333C23.033 25.3333 21.833 24.1333 21.833 22.6666C21.833 21.2 23.033 20 24.4997 20C25.9663 20 27.1663 21.2 27.1663 22.6666ZM13.833 36V38.6666H35.1663V36C35.1663 32.4533 28.0597 30.6666 24.4997 30.6666C20.9397 30.6666 13.833 32.4533 13.833 36ZM16.4997 36C16.7663 35.0533 20.8997 33.3333 24.4997 33.3333C28.0863 33.3333 32.2063 35.04 32.4997 36H16.4997ZM39.1663 32V28H43.1663V25.3333H39.1663V21.3333H36.4997V25.3333H32.4997V28H36.4997V32H39.1663Z" fill="#005C62"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1864_55196">
+                            <rect width="32" height="32" fill="white" transform="translate(12.5 12)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p class="heading2">5 Lakhs+</p>
+                <p class="body2">New candidates every month</p>
+            </div>
+        </section>
+        
+            <div class="text-container">
+                <h2 class="trust-text">Trusted by over 5 lakhs+ companies</h2>
+                <p class="click2-text">Businesses across industries and around India have built better customer relationships with UPTOSKILLS.</p>
+             </div>
+             <div class="banner-container">
+                <img src="bigbasket.png" class="banner-image" alt="Banner 1">
+                <img src="HDFC-Bank.png" class="banner-image" alt="Banner 2">
+                <img src="uber.jpeg" class="banner-image" alt="Banner 3">
+                <img src="Zomato.png" class="banner-image" alt="Banner 4">
+                <img src="urban company.jpeg" class="banner-image" alt="Banner 5">
+                <img src="paytm.jpeg" class="banner-image" alt="Banner 6">
+                <img src="axis  bank.jpeg" class="banner-image" alt="Banner 7">
+                <img src="tech mahindra.jpeg" class="banner-image" alt="Banner 8">
+                <img src="flipkart.jpeg" class="banner-image" alt="Banner 9">
+                <img src="aditya birla capital.jpeg" class="banner-image" alt="Banner 10">
+                <img src="bajaj.jpeg" class="banner-image" alt="Banner 11">
+            </div>
+            <br>
+            <br>
+            <br>
+            <section class="recommenders">
+                <h2 class="section-title">Recruiters Recommend UPTOSKILLS</h2>
+                <p class="section-subtitle">Teams like you are closing their company hirings faster with UPTOSKILLS</p>
+                <div class="recommendation-cards">
+                    <div class="card">
+                        <img src="bajaj.jpeg" alt="TATA 1mg Logo" class="logo">
+                        <p class="testimonial">We are closely working with apna for talent discovery and hiring across job families. Their quickest turn-around time is enabling us to uninterruptedly continue our daily functions and services, especially during the present times.</p>
+                        <p class="author">Dr Varun</p>
+                        <p class="designation">SVP, Medical Affairs</p>
+                    </div>
+                    <div class="card">
+                        <img src="uber.jpeg" alt="Shadowfax Logo" class="logo">
+                        <p class="testimonial">Team apna has provided us with great support. 75% of our job fulfillment for delivery personnel has been through the apna. I love the skill tag feature as we don’t have to manually type requirements.</p>
+                        <p class="author">Neraj Gupta</p>
+                        <p class="designation">City Head of Supply, Mumbai</p>
+                    </div>
+                    <div class="card">
+                        <img src="paytm.jpeg" alt="Nizams Logo" class="logo">
+                        <p class="testimonial">Before hearing about apna from a friend, I had doubts about tech solutions, but it proved to be beneficial to me. I added a listing, received 30-40 candidates, and was able to hire 3 people. These folks will now be trained and ramp up!</p>
+                        <p class="author">Kabir Chugh</p>
+                        <p class="designation">Restaurateur, Owner Nizams, 150K followers</p>
+                    </div>
+                </div>
+            </section>
+            <div class="faq-container">
+                <p><h1>Frequently Asked Questions</h1></p>
+                <div class="faq">
+                    <div class="question">Why Should I use UPTOSKILLS over others ?</div>
+                    <div class="answer">
+                        <ol>
+                            <li>UPTOSKILLS has the largest pool of active candidates; it took us just 5 years to reach a 5 cr+ candidate base</li>
+                            <li>UPTOSKILLS makes the hiring experience very personalised for you. - you can opt to receive callbacks from relevant candidate, WhatsApp all the candidates in bulk to filter at scale or user our Web Dashboard to shortlist or reject applications.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">What happens if I don't receive enough candidates?</div>
+                    <div class="answer">
+                        <ul>
+                            <li>You can always chat with Apna Support team for any help regarding your job posting. On a single click, our Support team will be available to guide you on ways to increase the application rate and close your hiring faster.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">In which cities I hire via UPTOSKILLS ?</div>
+                    <div class="answer">UPTOSKILLS is now LIVE in 800+ cities across India. You can easily find candidates from any city just by posting the job or searching candidates in apna Database for that city.</div>
+                </div>
+                <div class="faq">
+                    <div class="question">Is job validity different than credits validity?</div>
+                    <div class="answer">yes, job validity is always fixed to 15 days from the date of posting. While, Credits validity is based on the plan you have purchased. You can check the same in Credits & History tab</div>
+                </div>
+                <div class="faq">
+                    <div class="question">I want to hire more than 10 people, do you have any bulk-hiring plans?</div>
+                    <div class="answer">Yes, we offer bulk-hiring plans personalised for your needs at discounted prices. You can request a callback from our Sales team by clicking on Contact Sales button above.</div>
+                </div>
+            </div>
+            </main>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+            $(document).ready(function() {
+                $('.question').click(function() {
+                    var $answer = $(this).next('.answer');
+                    $('.answer').not($answer).slideUp(300).removeClass('open'); 
+                    $answer.stop(true, true).slideToggle(300).toggleClass('open'); 
+                });
+            });
+                function openTab(evt, tabName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+                document.getElementById("JobPostingPlans").style.display = "block"; // Open Job Posting Plans by default
+                document.getElementsByClassName('tablink')[1].click();
+                function closeWindow() {
+               window.location.href = '../index.html'; // Change 'index.html' to your index page's actual path
+               }
+         </script>
+    
+</body>
+</html>

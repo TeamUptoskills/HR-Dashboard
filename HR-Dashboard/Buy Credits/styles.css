@@ -1,0 +1,511 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; 
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+.close-btn {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+#alert-banner {
+    background-color: #f0f4ff;
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid #dce1ff; 
+    margin: 20px auto;
+    max-width: 600px; 
+
+}
+
+#alert-banner p {
+    margin: 10px 0; 
+}
+
+#alert-banner h4 {
+    margin: 0; 
+    font-size: 18px;
+    color: #1a73e8; 
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    margin: 10px 0;
+}
+
+.hero p {
+    color: #666;
+}
+
+.hero a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li.active {
+    border-bottom: 2px solid #007BFF;
+    color: #007BFF;
+}
+.plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plan, .plan-card.custom {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    text-align: center;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan h2, .plan-card.custom h3 {
+    margin: 10px 0;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan .price, .plan-card.custom .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.plan .discounted-price, .plan-card.custom .discounted-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745;
+    margin-right: 10px;
+}
+
+.plan .original-price, .plan-card.custom .original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+}
+
+.plan .discount, .plan-card.custom .discount {
+    color: #dc3545;
+}
+
+.plan button, .plan-card.custom button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan button:hover, .plan-card.custom button:hover {
+    background: #218838;
+}
+
+.plan .features, .plan-card.custom ol {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan .features li, .plan-card.custom ol li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan.recommended {
+    border: 2px solid #007BFF;
+    position: relative;
+}
+
+.plan.recommended::before {
+    content: 'Recommended for you';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007BFF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.plan-card.custom {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 22%;
+    display: inline-block;
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-card.custom h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan-card.custom p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan-card.custom button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan-card.custom button:hover {
+    background-color: #0056b3;
+}
+
+.plan-card.custom ol {
+    list-style-type: decimal;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan-card.custom ol li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+@media (max-width: 1200px) {
+    .plan, .plan-card.custom {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .plan, .plan-card.custom {
+        width: 100%;
+    }
+}
+
+.contact-help {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.contact-help .help-box {
+    display: flex;
+    align-items: center;
+    background: #e9f5ff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.note {
+    text-align: left;
+}
+
+.contact-help .help-box img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.contact-help .help-box h3 {
+    margin: 0;
+}
+
+.contact-help .help-box p {
+    margin: 0;
+    color: #555;
+}
+
+.usage-matrix-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; 
+    margin: 10px; 
+}
+
+.usage-matrix-card svg {
+    margin-bottom: 10px; 
+}
+
+.usage-matrix-card p {
+    margin: 5px 0; 
+}
+
+.text-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.trust-text {
+    margin: 0;
+    font-size: 24px; 
+}
+
+.click2-text {
+    margin: 10px 0 0 0;
+    font-size: 16px; 
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.flex-item svg {
+    margin-bottom: 10px;
+}
+
+.flex-item .heading2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.flex-item .body2 {
+    font-size: 1em;
+    color: #666;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    white-space: nowrap; 
+}
+
+.banner-image {
+    display: inline-block;
+    width: 100px; 
+    height: auto; 
+    flex-shrink: 0;
+    margin-right: 20px;
+    animation: moveBanner 10s linear infinite; 
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.recommenders {
+    background-color: #005D69;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.recommendation-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    color: #005D69;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.designation {
+    font-size: 12px;
+    color: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.faq-container {
+    max-width: 800px; 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq {
+    margin-bottom: 15px;
+}
+
+.question {
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.question:hover {
+    background-color: #2980b9;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden; 
+}
+
+.answer.open {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 600px) {
+    .faq-container {
+        padding: 10px;
+    }
+    .question {
+        font-size: 14px;
+    }
+}
+

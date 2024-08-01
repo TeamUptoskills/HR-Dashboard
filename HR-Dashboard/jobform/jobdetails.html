@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  
+  
+</head>
+<header>
+  <div class="bg-white p-4 m-5 rounded-lg flex item-centre justify-centre gap-10 max-w-4x4 ">
+    <div class="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center">
+      <span class="text-white font-bold">1</span>
+    </div>
+    <div class="text-gray-500 font-medium">JOB DETAILS </div>
+    <div class="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center">
+      <span class="text-grey-600 font-bold">2</span>
+    </div>
+    <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+      <span class="text-gray-700 font-bold">3</span>
+    </div>
+    <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+      <span class="text-gray-700 font-bold">4</span>
+    </div>
+    <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+      <span class="text-gray-700 font-bold">5</span>
+    </div>
+  </div>
+</header>
+<body class="bg-gray-500">
+  <div class="bg-white-200 min-h-screen flex items-center justify-center">
+    <div class="@apply w-3/4 bg-white mx-auto p-6 mb-4 mt-4">
+      <h2 class="text-xl font-semibold mb-4">Job details</h2>
+      <p class="text-muted-foreground mb-4">We use this information to find the best candidates for this job. <span class="text-destructive">*</span class="bg-colur-red"> marked fields are mandatory.</p>
+      <div class="mb-4">
+        <label for="company-name" class="block text-sm font-medium text-foreground">Company you're hiring for <span class="text-destructive">*</span></label>
+        <div class="flex items-center mt-1">
+          <input type="text" id="company-name" class="flex-1 border border-input rounded-lg p-2" placeholder="Tech Inc." />
+          <button id="changeButton" class="bg-green border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary">Change</button>
+    
+          <div id="changeModal" class="bg-white fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+            <div class="bg-white p-4 rounded-md shadow-lg w-96">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-medium text-gray-800">Reason to change the company name</h2>
+                    <button id="closeModal" class="text-gray-600 hover:text-gray-800">
+                        <img aria-hidden="true" alt="close-icon" src="https://openui.fly.dev/openui/24x24.svg?text=✖️" />
+                    </button>
+                </div>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="reason" class="form-radio text-primary focus:ring focus:ring-primary" />
+                        <span class="ml-2 text-gray-800">I changed my company</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="reason" class="form-radio text-primary focus:ring focus:ring-primary" />
+                        <span class="ml-2 text-gray-800">I belong to a consultancy & want to post for my client's company</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="reason" class="form-radio text-primary focus:ring focus:ring-primary" />
+                        <span class="ml-2 text-gray-800">I want to post for another company/business/consultancy of my own</span>
+                    </label>
+                </div>
+            </div>  
+        </div>
+          <script>
+            const changeButton = document.getElementById('changeButton');
+            const changeModal = document.getElementById('changeModal');
+            const closeModal = document.getElementById('closeModal');
+          
+            changeButton.addEventListener('click', () => {
+              changeModal.classList.remove('hidden');
+            });
+          
+            closeModal.addEventListener('click', () => {
+              changeModal.classList.add('hidden');
+            });
+          
+            window.addEventListener('click', (event) => {
+              if (event.target === changeModal) {
+                changeModal.classList.add('hidden');
+              }
+            });
+          </script>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="job-title" class="block text-sm font-medium text-foreground">Job title / Designation <span class="text-destructive">*</span></label>
+        <input type="text" id="job-title" class="w-full border border-input rounded-lg p-2 mt-1" placeholder="Eg. Accountant" />
+        <button id="toggle-button" style>Eg. Accountant</button>
+
+        <div id="form-fields" style="display: none;">
+          <label for="job-title" class="block text-sm font-medium text-foreground">Job role / Designation  <span class="text-destructive">*</span></label>
+          <input type="text" id="job-title" class="w-full border border-input rounded-lg p-2 mt-1" placeholder="Eg.Retail Sources " />
+        </div>
+        <script>
+          const toggleButton = document.getElementById('toggle-button');
+          const formFields = document.getElementById('form-fields');
+
+          toggleButton.addEventListener('click', () => {
+            if (formFields.style.display === 'none') {
+              formFields.style.display = 'block';
+            } else {
+              formFields.style.display = 'none';
+            }
+          });
+        </script>
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-foreground">Type of Job <span class="text-destructive">*</span></label>
+        <div class="flex space-x-2">
+          <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" data-selected="false">Full- TIme</button>
+          <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" data-selected="false">Part-Time </button>
+          <button class="u" data-selected="false">Both(full-time or part-time)</button>
+        </div>
+        
+      </div>
+      <div class="mb-4">
+        <label class="flex items-center">
+          <input type="checkbox" class="border border-input rounde--ful llg p-2 mr-2" />
+          <span class="text-foreground">This is a night shift job</span>
+        </label>
+      </div>
+      <div class="bg-[#d8e9ea] min-h-screen items-center justify-center">
+        <div class="mb-6">
+        <h2 class="text-lg font-semibold mb-2">Location</h2>
+        <p class="text-sm text-muted-foreground mb-4">Let candidates know where they will be working from.</p>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2">Work location type</label>
+          <div class="flex space-x-2">
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="field-job-button" onclick="toggleFieldJob()">Work from office </button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="toggle-button" onclick="toggleSpecificArea()" >Work From Home</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="toggle-button1" onclick="toggleOfficeAddress1()">Field job</button>
+  
+            
+            </div>
+            <div class="flex space-x-2" id="specific-area-container"  style="display: none;">
+              
+              <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="toggle-button" onclick="toggleSpecificArea1()">Specific area </button>
+              
+              <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary">Anywhere in india</button>
+              <select class="block w-full py-2 px-3 border border-input bg-background rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                <option>Select City</option>
+              </select>
+            </div>
+  
+  
+            <div id="field-job-container" style="display: none;">
+              <label for="job-title" class="block text-sm font-medium text-foreground">Office address / landmark *<span class="text-destructive">*</span></label>
+              <input type="text" id="job-title" class="w-full border border-input rounded-lg p-2 mt-1" placeholder="Eg. Accountant" />
+            </div>
+  
+            <script>
+              function toggleFieldJob() {
+                const fieldJobContainer = document.getElementById('field-job-container');
+                fieldJobContainer.style.display = fieldJobContainer.style.display === 'none' ? 'block' : 'none';
+              }
+            </script>
+            
+            <script>
+              function toggleSpecificArea() {
+                const specificAreaContainer = document.getElementById('specific-area-container');
+                specificAreaContainer.style.display = specificAreaContainer.style.display === 'none' ? 'block' : 'none';
+              }
+            </script>
+            <div id="office-address-fields" style="display: none;">
+              <label for="job-title" class="block text-sm font-medium text-foreground">Which area will the candidates be working in ? * <span class="text-destructive">*</span></label>
+              <input type="text" id="job-title" class="w-full border border-input rounded-lg p-2 mt-1" placeholder="Search for your locality/address" />
+            </div>          
+            <script>
+              function toggleOfficeAddress1() {
+                const officeAddressFields = document.getElementById("office-address-fields");
+                if (officeAddressFields.style.display === "none") {
+                  officeAddressFields.style.display = "block";
+                } else {
+                  officeAddressFields.style.display = "none";
+                }
+              }
+            </script>
+  
+              <script>
+                function toggleOfficeAddress() {
+                  const officeAddressLabel = document.getElementById('office-address-label');
+                  const officeAddressInput = document.getElementById('office-address-input');
+                  officeAddressLabel.style.display = officeAddressLabel.style.display === 'none'? 'block' : 'none';
+                  officeAddressInput.style.display = officeAddressInput.style.display === 'none'? 'block' : 'none';
+                }
+              </script>
+        </div>
+       
+        <div>
+          <button class="bg-blue  hover:underline " >+ Add Floor / Plot no. / Shop no. (optional)</button>
+        </div>
+      </div>
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold mb-2">Compensation</h2>
+        <p class="text-sm text-muted-foreground mb-4">Just populate with right pay & incentives. It will help you find the right candidates.</p>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2">What is the pay type?</label>
+          <div class="flex space-x-2">
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="fixed-only-btn">Fixed Only</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="fixed-incentive-btn">Fixed + Incentive</button>
+  
+            
+            
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="toggleButton1" >Incentive Only</button>
+           
+            
+          </div>
+          <div id="fixed-salary-form" class="hidden">
+            <label class="block text-sm font-medium text-foreground">
+              Fixed salary / month (excluding incentives) <span class="text-destructive">*</span>
+              <img aria-hidden="true" alt="info" src="https://openui.fly.dev/openui/16x16.svg?text=ℹ️" class="inline-block ml-1" />
+            </label>
+            <div class="flex mt-1">
+              <input type="text" placeholder="Minimum fixed salary" class="flex-1 p-2 border border-border rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary" />
+              <span class="flex items-center px-3 bg-muted text-muted-foreground border-t border-b border-border">to</span>
+              <input type="text" placeholder="Maximum fixed salary" class="flex-1 p-2 border border-border rounded-r-md focus:outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+          </div>
+  
+  
+          <div id="fixed-incentive-form" class="hidden">
+            
+            <div class="flex-1">
+              <label class="block text-sm font-medium text-foreground">
+                Fixed salary / month (excluding incentives) <span class="text-destructive">*</span>
+                <img aria-hidden="true" alt="info" src="https://openui.fly.dev/openui/16x16.svg?text=ℹ️" class="inline-block ml-1" />
+              </label>
+              <div class="flex mt-1">
+                <input type="text" placeholder="Minimum fixed salary" class="flex-1 p-2 border border-border rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                <span class="flex items-center px-3 bg-muted text-muted-foreground border-t border-b border-border">to</span>
+                <input type="text" placeholder="Maximum fixed salary" class="flex-1 p-2 border border-border rounded-r-md focus:outline-none focus:ring-2 focus:ring-primary" />
+              </div>
+            </div>
+          
+            <div class="flex-1 mt-4 md:mt-0">
+              <label class="block text-sm font-medium text-foreground">
+                Average incentive / month <span class="text-destructive">*</span>
+                <img aria-hidden="true" alt="info" src="https://openui.fly.dev/openui/16x16.svg?text=ℹ️" class="inline-block ml-1" />
+              </label>
+              <div class="mt-1">
+                <input type="text" placeholder="Eg. ₹2000" class="w-full p-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+              </div>
+            </div>
+          </div>
+  
+          <div id="inputFieldContainer" class="hidden">
+            <label for="incentive" class="block text-sm font-medium text-foreground">
+              Average Incentive / month <span class="text-destructive">*</span>
+              <img aria-hidden="true" alt="info-icon" src="https://openui.fly.dev/openui/16x16.svg?text=ℹ" class="inline-block ml-1" />
+            </label>
+            <input
+              type="text"
+              id="incentive"
+              placeholder="Eg. ₹2000"
+              class="mt-1 block w-full px-3 py-2 border border-border rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            />
+          </div>
+          
+  
+  
+  
+          <script>
+            const fixedIncentiveBtn = document.getElementById('fixed-incentive-btn');
+            const fixedIncentiveForm = document.getElementById('fixed-incentive-form');
+            
+            fixedIncentiveBtn.addEventListener('click', () => {
+              fixedIncentiveForm.classList.toggle('hidden');
+            });
+            
+  
+              const toggleButton1 = document.getElementById('toggleButton1');
+              const inputFieldContainer = document.getElementById('inputFieldContainer');
+  
+              toggleButton1.addEventListener('click', () => {
+                inputFieldContainer.classList.toggle('hidden');
+              });
+                      
+  
+  
+            const fixedOnlyBtn = document.getElementById('fixed-only-btn');
+            const fixedSalaryForm = document.getElementById('fixed-salary-form');
+            
+            fixedOnlyBtn.addEventListener('click', () => {
+              fixedSalaryForm.classList.toggle('hidden');
+            });
+          </script>
+          
+         
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2">Do you offer any additional perks?</label>
+          <div class="flex flex-wrap gap-2">
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-1" >Flexible Working Hours+ </button>
+          <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-2">Weekly Payout +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-3">Overtime Pay +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-4">Joining Bonus +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-5">Annual Bonus +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-6">PF +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-7">Travel Allowance +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-8">Period Allowance +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-9">Mobile Allowance +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-10">Internet Allowance +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-11">Laptop +</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary" id="content-12">Health Insurance +</button>
+          </div>
+          <script>
+            const buttons = document.querySelectorAll('button');
+            const selectedOptions = document.getElementById('selected-options');
+  
+            buttons.forEach((button) => {
+              button.addEventListener('click', (e) => {
+                const selected = e.target.classList.contains('bg-blue-500');
+                if (selected) {
+                  e.target.classList.remove('bg-blue-500', 'text-white');
+                } else {
+                  e.target.classList.add('bg-blue-500', 'text-white');
+                }
+                updateSelectedOptions();
+              });
+            });
+  
+            function updateSelectedOptions() {
+              const selectedButtons = document.querySelectorAll('button.bg-blue-500');
+              const selectedOptionsText = selectedButtons.map((button) => button.textContent).join(', ');
+              selectedOptions.textContent = `Selected options: ${selectedOptionsText}`;
+            }
+          </script>
+        </div>
+        <div>
+          <button class="text-primary hover:underline">+ Add other perks</button>
+        </div>
+      </div>
+      <div class="mb-6">
+        <label class="block text-sm font-medium mb-2">Is there any joining fee or deposit required from the candidate?</label>
+          <div class="flex space-x-2">
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary">Yes</button>
+            <button class="bg-secondary border border-[var(--border)] text-[var(--foreground)] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-full focus:ring ring-primary">No</button>
+          </div>
+        </div>
+        <div class="text-center">
+          
+          <button class="bg-green-500 text-white hover:bg-green-700 px-4 py-2 rounded" onclick="continueToNextPage()">Continue</button></div> 
+          <script>
+          function continueToNextPage() {
+            window.location.href = 'candidate.html';
+          }
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
